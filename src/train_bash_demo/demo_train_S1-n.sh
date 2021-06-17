@@ -1,0 +1,4 @@
+python main.py --model EDSR --scale 3 --patch_size 48 --adafm --save EDSR_X3_demo_game_15s_1_M0 --reset --data_train DIV2K --data_test DIV2K --data_range 1-450/451-495 --dir_data /home/datasets/VSD4K/game/game_15s_1
+python main.py --model EDSR --scale 3 --patch_size 48 --adafm --save EDSR_X3_demo_game_15s_1_S1 --reset --data_train DIV2K --data_test DIV2K --data_range 1-150/451-465 --dir_data /home/datasets/VSD4K/game/game_15s_1
+python main.py --model EDSR --scale 3 --patch_size 48 --adafm --save EDSR_X3_demo_game_15s_1_S2 --reset --data_train DIV2K --data_test DIV2K --data_range 151-300/466-480 --dir_data /home/datasets/VSD4K/game/game_15s_1
+python main.py --model EDSR --scale 3 --patch_size 48 --adafm --save EDSR_X3_demo_game_15s_1_S3 --reset --data_train DIV2K --data_test DIV2K --data_range 301-450/481-495 --dir_data /home/datasets/VSD4K/game/game_15s_1

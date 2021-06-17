@@ -1,0 +1,1 @@
+python main.py --model EDSR --scale 3 --patch_size 48 --save EDSR_X3_demo_game_15s_1_M1-n --reset --data_train DIV2K --data_test DIV2K --data_range 1-450/451-495 --cafm --dir_data /home/datasets/VSD4K/game/game_15s_1 --use_cafm --batch_size 64 --epoch 500 --decay 300 --segnum 3
