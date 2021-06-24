@@ -15,7 +15,7 @@ dataroot_lqx4: VSD4K/game/game_15s_1/DIV2K_train_LR_bicubic/X4/00001_x4.png
 Our paper __"Overfitting the Data: Compact Neural Video Delivery via Content-aware Feature Modulation"__ has been submitted to 2021 ICCV. we aim to use super resolution network to improve the quality of video delivery recently. The whole precedure is shown below. We devide the whole video into several chunks and apply a joint training framework with Content aware Feature Module(CaFM) to train each chunk simultaneously. With our method, each video chunk only requires less than 1% of original parameters to be streamed, achieving even better SR performance. We conduct extensive experiments across various SR backbones(espcn,srcnn,vdsr,edsr16,edsr32,rcan), video time length(15s-10min), and scaling factors(x2-x4) to demonstrate the advantages of our method. 
 All pretrain models(15s, 30s, 45s) of game category can be found in this link [https://pan.baidu.com/s/1P18FULL7CIK1FAa2xW56AA] (passward:bjv1) and google drive link [https://drive.google.com/drive/folders/1_N64A75iwgbweDBk7dUUDX0SJffnK5-l?usp=sharing]. 
 
-<img src="./images/intro.png"> 
+<img src="./images/intro_pic1.png"> 
 
 Figure 1. The whole procedure of adopting content-aware DNNs for video delivery. A video is first divided into several chunks and the server trains one model for each chunk. Then the server delivers LR video chunks and models to client. The client runs the inference to super-resolve the LR chunks and obtain the SR video.
 
