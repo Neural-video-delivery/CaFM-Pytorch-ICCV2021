@@ -116,3 +116,7 @@ CUDA_VISIBLE_DEVICES=3 python main.py --data_test DIV2K --scale 4 --model EDSR -
 ## Additional
 
 We also demonstrate our method in vimeo dataset and HEVC test sequence. These datasets and all trained models will be released as soon as possible. By the way, we add SEFCNN.py into our backbone list which is suggested by reviewer.The code will be updated regularly.
+
+## Acknowledgment
+
+AdaFM proposed a closely related method for continual modulation of restoration levels. While they aimed to handle arbitrary restoration levels between a start and an end level, our goal is to compress the models of different chunks for video delivery. The reader is encouraged to review their work for more details. Please also consider to cite AdaFM if you use the code. [https://github.com/hejingwenhejingwen/AdaFM]
