@@ -74,11 +74,11 @@ For simplicity, we only demonstrate how to train 'game_15s' by our method.
 
 * __For M{1-n} model__: 
 ```
-CUDA_VISIBLE_DEVICES=3 python main.py --model {EDSR/ESPCN/VDSRR/SRCNN/RCAN} --scale {scale factor} --patch_size {patch size} --save {name of the trained model} --reset --data_train DIV2K --data_test DIV2K --data_range {train_range}/{test_range} --cafm --dir_data {path of data} --use_cafm --batch_size {batch size} --epoch {epoch} --decay {decay} --segnum {numbers of chunk}
+CUDA_VISIBLE_DEVICES=3 python main.py --model {EDSR/ESPCN/VDSRR/SRCNN/RCAN} --scale {scale factor} --patch_size {patch size} --save {name of the trained model} --reset --data_train DIV2K --data_test DIV2K --data_range {train_range}/{test_range} --cafm --dir_data {path of data} --use_cafm --batch_size {batch size} --epoch {epoch} --decay {decay} --segnum {numbers of chunk} --length
 ```
 ```
 e.g. 
-CUDA_VISIBLE_DEVICES=3 python main.py --model EDSR --scale 2 --patch_size 48 --save trainm1_n --reset --data_train DIV2K --data_test DIV2K --data_range 1-450/451-495 --cafm --dir_data /home/datasets/VSD4K/game/game_15s_1 --use_cafm --batch_size 64 --epoch 500 --decay 300 --segnum 3
+CUDA_VISIBLE_DEVICES=3 python main.py --model EDSR --scale 2 --patch_size 48 --save trainm1_n --reset --data_train DIV2K --data_test DIV2K --data_range 1-450/451-495 --cafm --dir_data /home/datasets/VSD4K/game/game_15s_1 --use_cafm --batch_size 64 --epoch 500 --decay 300 --segnum 3 --is15s
 ```
 
 You can apply our method on your own images. Place your HR images under YOURS/DIV2K_train_HR/, with the name start from 00001.png. 
@@ -92,13 +92,13 @@ dataroot_lqx4: YOURS/DIV2K_train_LR_bicubic/X4/00001_x4.png
 ```
 * The running command is like: 
 ```
-CUDA_VISIBLE_DEVICES=3 python main.py --model {EDSR/ESPCN/VDSRR/SRCNN/RCAN} --scale {scale factor} --patch_size {patch size} --save {name of the trained model} --reset --data_train DIV2K --data_test DIV2K --data_range {train_range}/{test_range} --cafm --dir_data {path of data} --use_cafm --batch_size {batch size} --epoch {epoch} --decay {decay} --segnum {numbers of chunk}
+CUDA_VISIBLE_DEVICES=3 python main.py --model {EDSR/ESPCN/VDSRR/SRCNN/RCAN} --scale {scale factor} --patch_size {patch size} --save {name of the trained model} --reset --data_train DIV2K --data_test DIV2K --data_range {train_range}/{test_range} --cafm --dir_data {path of data} --use_cafm --batch_size {batch size} --epoch {epoch} --decay {decay} --segnum {numbers of chunk} --length
 ```
 
 * For example:
 ```
 e.g. 
-CUDA_VISIBLE_DEVICES=3 python main.py --model EDSR --scale 2 --patch_size 48 --save trainm1_n --reset --data_train DIV2K --data_test DIV2K --data_range 1-450/451-495 --cafm --dir_data /home/datasets/VSD4K/game/game_15s_1 --use_cafm --batch_size 64 --epoch 500 --decay 300 --segnum 3
+CUDA_VISIBLE_DEVICES=3 python main.py --model EDSR --scale 2 --patch_size 48 --save trainm1_n --reset --data_train DIV2K --data_test DIV2K --data_range 1-450/451-495 --cafm --dir_data /home/datasets/VSD4K/game/game_15s_1 --use_cafm --batch_size 64 --epoch 500 --decay 300 --segnum 3 --is15s
 ```
 
 ### Test
